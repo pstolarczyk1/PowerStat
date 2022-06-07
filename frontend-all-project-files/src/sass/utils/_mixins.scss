@@ -1,0 +1,52 @@
+@function vw($target, $width: 1920) {
+    $vw-context: ($width * 0.01) * 1px;
+    @return calc($target/$vw-context) * 1.0000001vw;
+}
+
+@function rem($size, $base: 16px) {
+    $remSize: $size / $base;
+    @return #{$remSize}rem;
+}
+
+@function vh($target, $height: 768) {
+    $vh-context: ($height * 0.01) * 1px;
+    @return ($target/$vh-context) * 1.0000001vh;
+}
+
+//Linear vw math.div($target, $vw-context)
+@function lvw($SizeMax, $VPmax, $SizeMin, $VPmin) {
+    $fsb: (1rem / 1rem) * 16px; //Font-size-base boodstrap to px
+    $a: ($SizeMin - $SizeMax)/($VPmin - $VPmax);
+    $b: (($SizeMax - ($a*$VPmax))/$fsb)*1rem;
+    $a: $a/1px * 100vw;
+    @return calc(#{$b} + #{$a});
+}
+
+@function lh($fontSize, $lghpx) {
+    @return ($lghpx/$fontSize);
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $size $color;
+        -moz-box-shadow: inset $top $left $blur $size $color;
+        box-shadow: inset $top $left $blur $size $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $size $color;
+        -moz-box-shadow: $top $left $blur $size $color;
+        box-shadow: $top $left $blur $size $color;
+    }
+}
+
+@mixin Mobile() {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin Desktop() {
+    @media (min-width: 992px) {
+        @content;
+    }
+}

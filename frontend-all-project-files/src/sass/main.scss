@@ -1,0 +1,21 @@
+$viewport: 1920;
+:root {
+    --color-gold: #faa14e;
+    --color-orange: #be572e;
+}
+
+//Utils - Funkcje sass, Mixiny, pomocnicze klasy i selektory
+@import "utils/mixins";
+//base - Biblioteki głowne
+@import "base/reset";
+//Layout - Nawigacja, grid, nagłówki, stopki, ogólne style formularzy
+@import "layout/body";
+@import "layout/typography";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/menu";
+@import "layout/hamburger";
+@import "components/icons";
+//Components - przyciski, okładki, widgety itd.
+//Bloki - bloki 
+//Pages - Style dla konkretnej podstrony

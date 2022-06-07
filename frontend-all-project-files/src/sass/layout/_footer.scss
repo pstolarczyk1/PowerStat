@@ -1,0 +1,109 @@
+footer {
+    // margin-bottom: 0;
+    // padding-bottom: 0;
+    background-color: #121212;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    margin-top: auto;
+    .container-footer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .footer{
+        &-block {
+            align-self: center;
+            width: 24%;
+            padding: 10px 0; 
+            font-size: 18px;
+            font-weight: bold;
+        }
+        &-logo{
+            a { svg {
+                width: 48px;
+                height: auto;
+            } }
+        }
+        &-social{
+            flex-direction: row;
+            display: flex;
+            a{
+                text-decoration: none;
+                font-size: 32px;
+                color: white;
+                width: fit-content;
+                width: -moz-fit-content;
+                margin: auto 15px;
+                transition: transform 0.3s ease;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+        
+    }
+    .copyright {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1920px){
+    footer {
+        .footer{
+            &-block {
+                padding: vw(10px) 0; 
+                font-size: vw(18px);
+            }
+            &-logo{
+                a { svg {
+                    width: vw(48px);
+                    height: auto;
+                } }
+            }
+            &-social{
+                a {
+                    font-size: vw(32px); 
+                        padding: 0 vw(15px);
+                        width: vw(32px);
+                    
+                }
+            }
+        }
+        .copyright {
+            padding: vw(10px) 0;
+            font-size: vw(16px);
+        }
+    }
+}
+
+@media (max-width: 991.98px){
+    footer {
+        .container-footer {
+            width: 100%; 
+            padding-bottom: 15px;
+            flex-direction: column;
+        }
+        .footer{
+            &-block {
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+            }
+            &-logo{
+                padding-top: 25px;
+                a {
+                    svg {
+                        width: 32px;
+                        height: auto;
+                    }
+                }
+            }
+            &-social{
+                justify-content: center;
+            }
+        }
+    }
+}

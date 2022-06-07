@@ -1,0 +1,37 @@
+{
+  "name": "template",
+  "repository": {},
+  "version": "1.0.0",
+  "description": "Theme for projekt",
+  "scripts": {
+    "start": "npm run watch",
+    "build-dev": "gulp build --env=development",
+    "watch": "gulp dev-watch --env=development",
+    "javascrtip-dev": "gulp scripts --env=development",
+    "style-dev": "gulp styles --env=development",
+    "build": "gulp build --env=production",
+    "javascrtip": "gulp scripts --env=production",
+    "style": "gulp styles --env=production"
+  },
+  "author": "me",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-join-media-queries": "^1.2.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "minimist": "^1.2.6"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0",
+    "readable-stream": "^3.6.0",
+    "sass": "^1.50.0",
+    "swiper": "^8.1.1"
+  },
+  "main": "gulpfile.js",
+  "license": "ISC"
+}
